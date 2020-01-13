@@ -14,6 +14,7 @@
 		8557526023CC5C7B00833205 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8557525F23CC5C7B00833205 /* Assets.xcassets */; };
 		8557526323CC5C7B00833205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8557526123CC5C7B00833205 /* LaunchScreen.storyboard */; };
 		8557526623CC5C7B00833205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557526523CC5C7B00833205 /* main.m */; };
+		8557526E23CC73F100833205 /* XYAppLifeCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557526D23CC73F100833205 /* XYAppLifeCycleController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		8557526223CC5C7B00833205 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8557526423CC5C7B00833205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8557526523CC5C7B00833205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8557526C23CC73F100833205 /* XYAppLifeCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAppLifeCycleController.h; sourceTree = "<group>"; };
+		8557526D23CC73F100833205 /* XYAppLifeCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAppLifeCycleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				8557526123CC5C7B00833205 /* LaunchScreen.storyboard */,
 				8557526423CC5C7B00833205 /* Info.plist */,
 				8557526523CC5C7B00833205 /* main.m */,
+				8557526C23CC73F100833205 /* XYAppLifeCycleController.h */,
+				8557526D23CC73F100833205 /* XYAppLifeCycleController.m */,
 			);
 			path = IOSPractice;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				8557525B23CC5C7A00833205 /* ViewController.m in Sources */,
 				8557525523CC5C7A00833205 /* AppDelegate.m in Sources */,
 				8557526623CC5C7B00833205 /* main.m in Sources */,
+				8557526E23CC73F100833205 /* XYAppLifeCycleController.m in Sources */,
 				8557525823CC5C7A00833205 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
