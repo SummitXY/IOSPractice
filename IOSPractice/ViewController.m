@@ -45,7 +45,10 @@
 // tableView 数据
 - (void)setupList {
 
-    self.list = @[@{@"show_name":@"App生命周期",@"class_name":@"XYAppLifeCycleController"}];
+    self.list = @[
+  @{@"show_name":@"App生命周期",@"class_name":@"XYAppLifeCycleController"},
+  @{@"show_name":@"链式编程",@"class_name":@"XYChainMethodController"},
+  @{@"show_name":@"RAC简单使用",@"class_name":@"XYRACEasyUseController"}];
 }
 
 - (void)viewDidLoad {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,15 @@
 		8557526323CC5C7B00833205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8557526123CC5C7B00833205 /* LaunchScreen.storyboard */; };
 		8557526623CC5C7B00833205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557526523CC5C7B00833205 /* main.m */; };
 		8557526E23CC73F100833205 /* XYAppLifeCycleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557526D23CC73F100833205 /* XYAppLifeCycleController.m */; };
+		8557527123CC7AEE00833205 /* XYChainMethodController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527023CC7AEE00833205 /* XYChainMethodController.m */; };
+		8557527823CC7F3C00833205 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527723CC7F3C00833205 /* Calculator.m */; };
+		8557527B23CC7FF900833205 /* CalculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527A23CC7FF900833205 /* CalculatorMaker.m */; };
+		8557528023CC9BA700833205 /* XYRACEasyUseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527F23CC9BA700833205 /* XYRACEasyUseController.m */; };
+		AD6F844AA0AF7202F5ECA477 /* Pods_IOSPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2A109E8A5C4F4205B9E244 /* Pods_IOSPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		477525851E1FBD8EE60C2F76 /* Pods-IOSPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPractice.debug.xcconfig"; path = "Target Support Files/Pods-IOSPractice/Pods-IOSPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		8557525023CC5C7A00833205 /* IOSPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8557525323CC5C7A00833205 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8557525423CC5C7A00833205 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +38,16 @@
 		8557526523CC5C7B00833205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8557526C23CC73F100833205 /* XYAppLifeCycleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAppLifeCycleController.h; sourceTree = "<group>"; };
 		8557526D23CC73F100833205 /* XYAppLifeCycleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAppLifeCycleController.m; sourceTree = "<group>"; };
+		8557526F23CC7AEE00833205 /* XYChainMethodController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYChainMethodController.h; sourceTree = "<group>"; };
+		8557527023CC7AEE00833205 /* XYChainMethodController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYChainMethodController.m; sourceTree = "<group>"; };
+		8557527623CC7F3C00833205 /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		8557527723CC7F3C00833205 /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		8557527923CC7FF900833205 /* CalculatorMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorMaker.h; sourceTree = "<group>"; };
+		8557527A23CC7FF900833205 /* CalculatorMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorMaker.m; sourceTree = "<group>"; };
+		8557527E23CC9BA700833205 /* XYRACEasyUseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYRACEasyUseController.h; sourceTree = "<group>"; };
+		8557527F23CC9BA700833205 /* XYRACEasyUseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYRACEasyUseController.m; sourceTree = "<group>"; };
+		8E2A109E8A5C4F4205B9E244 /* Pods_IOSPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1778686FA7FB711BFDF0ECE /* Pods-IOSPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPractice.release.xcconfig"; path = "Target Support Files/Pods-IOSPractice/Pods-IOSPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD6F844AA0AF7202F5ECA477 /* Pods_IOSPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47494A148AC0F20D1B9CA590 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				477525851E1FBD8EE60C2F76 /* Pods-IOSPractice.debug.xcconfig */,
+				F1778686FA7FB711BFDF0ECE /* Pods-IOSPractice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8557524723CC5C7A00833205 = {
 			isa = PBXGroup;
 			children = (
 				8557525223CC5C7A00833205 /* IOSPractice */,
 				8557525123CC5C7A00833205 /* Products */,
+				47494A148AC0F20D1B9CA590 /* Pods */,
+				8FB3DA8148FF2E2EBAB18BBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +92,9 @@
 		8557525223CC5C7A00833205 /* IOSPractice */ = {
 			isa = PBXGroup;
 			children = (
+				8557527D23CC9B5500833205 /* RAC简单使用 */,
+				8557527C23CC91AE00833205 /* App生命周期 */,
+				8557527223CC7B1700833205 /* 链式编程Demo */,
 				8557525323CC5C7A00833205 /* AppDelegate.h */,
 				8557525423CC5C7A00833205 /* AppDelegate.m */,
 				8557525623CC5C7A00833205 /* SceneDelegate.h */,
@@ -75,10 +106,47 @@
 				8557526123CC5C7B00833205 /* LaunchScreen.storyboard */,
 				8557526423CC5C7B00833205 /* Info.plist */,
 				8557526523CC5C7B00833205 /* main.m */,
+			);
+			path = IOSPractice;
+			sourceTree = "<group>";
+		};
+		8557527223CC7B1700833205 /* 链式编程Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8557526F23CC7AEE00833205 /* XYChainMethodController.h */,
+				8557527023CC7AEE00833205 /* XYChainMethodController.m */,
+				8557527623CC7F3C00833205 /* Calculator.h */,
+				8557527723CC7F3C00833205 /* Calculator.m */,
+				8557527923CC7FF900833205 /* CalculatorMaker.h */,
+				8557527A23CC7FF900833205 /* CalculatorMaker.m */,
+			);
+			path = "链式编程Demo";
+			sourceTree = "<group>";
+		};
+		8557527C23CC91AE00833205 /* App生命周期 */ = {
+			isa = PBXGroup;
+			children = (
 				8557526C23CC73F100833205 /* XYAppLifeCycleController.h */,
 				8557526D23CC73F100833205 /* XYAppLifeCycleController.m */,
 			);
-			path = IOSPractice;
+			path = "App生命周期";
+			sourceTree = "<group>";
+		};
+		8557527D23CC9B5500833205 /* RAC简单使用 */ = {
+			isa = PBXGroup;
+			children = (
+				8557527E23CC9BA700833205 /* XYRACEasyUseController.h */,
+				8557527F23CC9BA700833205 /* XYRACEasyUseController.m */,
+			);
+			path = "RAC简单使用";
+			sourceTree = "<group>";
+		};
+		8FB3DA8148FF2E2EBAB18BBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E2A109E8A5C4F4205B9E244 /* Pods_IOSPractice.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8557526923CC5C7B00833205 /* Build configuration list for PBXNativeTarget "IOSPractice" */;
 			buildPhases = (
+				3B45DFD2714FDCFF2439F730 /* [CP] Check Pods Manifest.lock */,
 				8557524C23CC5C7A00833205 /* Sources */,
 				8557524D23CC5C7A00833205 /* Frameworks */,
 				8557524E23CC5C7A00833205 /* Resources */,
+				31C22F2F0E2EAA9C3BA64635 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +216,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31C22F2F0E2EAA9C3BA64635 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSPractice/Pods-IOSPractice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSPractice/Pods-IOSPractice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSPractice/Pods-IOSPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B45DFD2714FDCFF2439F730 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOSPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8557524C23CC5C7A00833205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -154,8 +266,12 @@
 				8557525B23CC5C7A00833205 /* ViewController.m in Sources */,
 				8557525523CC5C7A00833205 /* AppDelegate.m in Sources */,
 				8557526623CC5C7B00833205 /* main.m in Sources */,
+				8557527823CC7F3C00833205 /* Calculator.m in Sources */,
+				8557528023CC9BA700833205 /* XYRACEasyUseController.m in Sources */,
 				8557526E23CC73F100833205 /* XYAppLifeCycleController.m in Sources */,
 				8557525823CC5C7A00833205 /* SceneDelegate.m in Sources */,
+				8557527B23CC7FF900833205 /* CalculatorMaker.m in Sources */,
+				8557527123CC7AEE00833205 /* XYChainMethodController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +409,7 @@
 		};
 		8557526A23CC5C7B00833205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477525851E1FBD8EE60C2F76 /* Pods-IOSPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +427,7 @@
 		};
 		8557526B23CC5C7B00833205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1778686FA7FB711BFDF0ECE /* Pods-IOSPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
