@@ -87,22 +87,20 @@ static int count = 0;
 //    self.btn1.rac_command = btn1_rac_commond;
 
     // RAC使用6
-//    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-//        count += 1;
-//        [subscriber sendNext:[NSString stringWithFormat:@"%d",count]];
-//        [subscriber sendCompleted];
-//        return [RACDisposable disposableWithBlock:^{
-//            NSLog(@"disposable");
-//        }];
-//    }];
-//
-//    [signal subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"subscribeNext1:%@",x);
-//    }];
-//
-//    [signal subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"subscribeNext2:%@",x);
-//    }];
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        count += 1;
+        [subscriber sendNext:[NSString stringWithFormat:@"%d",count]];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"subscribeNext1:%@",x);
+    }];
+
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"subscribeNext2:%@",x);
+    }];
 
 //    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //        [signal subscribeNext:^(id  _Nullable x) {
@@ -289,22 +287,22 @@ static int count = 0;
 
     // RAC使用13
 
-    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        [subscriber sendNext:[NSString stringWithFormat:@"1"]];
-        [subscriber sendNext:[NSString stringWithFormat:@"2"]];
-        [subscriber sendNext:[NSString stringWithFormat:@"3"]];
-        [subscriber sendCompleted];
-        return nil;
-    }] skipWhileBlock:^BOOL(id  _Nullable x) {
-        if ([x isEqualToString:@"2"]) {
-            return YES;
-        }
-        return NO;
-    }];
-
-    [signal subscribeNext:^(id  _Nullable x) {
-        NSLog(@"sub:%@",x);
-    }];
+//    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//        [subscriber sendNext:[NSString stringWithFormat:@"1"]];
+//        [subscriber sendNext:[NSString stringWithFormat:@"2"]];
+//        [subscriber sendNext:[NSString stringWithFormat:@"3"]];
+//        [subscriber sendCompleted];
+//        return nil;
+//    }] skipWhileBlock:^BOOL(id  _Nullable x) {
+//        if ([x isEqualToString:@"2"]) {
+//            return YES;
+//        }
+//        return NO;
+//    }];
+//
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"sub:%@",x);
+//    }];
 }
 
 #pragma mark - Target Action

@@ -48,7 +48,8 @@
     self.list = @[
   @{@"show_name":@"App生命周期",@"class_name":@"XYAppLifeCycleController"},
   @{@"show_name":@"链式编程",@"class_name":@"XYChainMethodController"},
-  @{@"show_name":@"RAC简单使用",@"class_name":@"XYRACEasyUseController"}];
+  @{@"show_name":@"RAC简单使用",@"class_name":@"XYRACEasyUseController"},
+  @{@"show_name":@"FPS指示器实现",@"class_name":@"XYFPSController"}];
 }
 
 - (void)viewDidLoad {
@@ -81,6 +82,7 @@
 
 
     [self.navigationController pushViewController:[NSClassFromString([self.list[indexPath.row] objectForKey:@"class_name"]) new] animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

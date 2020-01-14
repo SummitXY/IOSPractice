@@ -19,6 +19,8 @@
 		8557527823CC7F3C00833205 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527723CC7F3C00833205 /* Calculator.m */; };
 		8557527B23CC7FF900833205 /* CalculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527A23CC7FF900833205 /* CalculatorMaker.m */; };
 		8557528023CC9BA700833205 /* XYRACEasyUseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557527F23CC9BA700833205 /* XYRACEasyUseController.m */; };
+		8557528423CDE3D400833205 /* XYFPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557528323CDE3D300833205 /* XYFPSController.m */; };
+		8557528723CDEC6100833205 /* XYFPSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8557528623CDEC6100833205 /* XYFPSCell.m */; };
 		AD6F844AA0AF7202F5ECA477 /* Pods_IOSPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2A109E8A5C4F4205B9E244 /* Pods_IOSPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,10 @@
 		8557527A23CC7FF900833205 /* CalculatorMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorMaker.m; sourceTree = "<group>"; };
 		8557527E23CC9BA700833205 /* XYRACEasyUseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYRACEasyUseController.h; sourceTree = "<group>"; };
 		8557527F23CC9BA700833205 /* XYRACEasyUseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYRACEasyUseController.m; sourceTree = "<group>"; };
+		8557528223CDE3D300833205 /* XYFPSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFPSController.h; sourceTree = "<group>"; };
+		8557528323CDE3D300833205 /* XYFPSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFPSController.m; sourceTree = "<group>"; };
+		8557528523CDEC6100833205 /* XYFPSCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFPSCell.h; sourceTree = "<group>"; };
+		8557528623CDEC6100833205 /* XYFPSCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFPSCell.m; sourceTree = "<group>"; };
 		8E2A109E8A5C4F4205B9E244 /* Pods_IOSPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1778686FA7FB711BFDF0ECE /* Pods-IOSPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSPractice.release.xcconfig"; path = "Target Support Files/Pods-IOSPractice/Pods-IOSPractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,7 @@
 		8557525223CC5C7A00833205 /* IOSPractice */ = {
 			isa = PBXGroup;
 			children = (
+				8557528123CDE3BD00833205 /* FPS指示器实现 */,
 				8557527D23CC9B5500833205 /* RAC简单使用 */,
 				8557527C23CC91AE00833205 /* App生命周期 */,
 				8557527223CC7B1700833205 /* 链式编程Demo */,
@@ -139,6 +146,17 @@
 				8557527F23CC9BA700833205 /* XYRACEasyUseController.m */,
 			);
 			path = "RAC简单使用";
+			sourceTree = "<group>";
+		};
+		8557528123CDE3BD00833205 /* FPS指示器实现 */ = {
+			isa = PBXGroup;
+			children = (
+				8557528223CDE3D300833205 /* XYFPSController.h */,
+				8557528323CDE3D300833205 /* XYFPSController.m */,
+				8557528523CDEC6100833205 /* XYFPSCell.h */,
+				8557528623CDEC6100833205 /* XYFPSCell.m */,
+			);
+			path = "FPS指示器实现";
 			sourceTree = "<group>";
 		};
 		8FB3DA8148FF2E2EBAB18BBF /* Frameworks */ = {
@@ -265,8 +283,10 @@
 			files = (
 				8557525B23CC5C7A00833205 /* ViewController.m in Sources */,
 				8557525523CC5C7A00833205 /* AppDelegate.m in Sources */,
+				8557528423CDE3D400833205 /* XYFPSController.m in Sources */,
 				8557526623CC5C7B00833205 /* main.m in Sources */,
 				8557527823CC7F3C00833205 /* Calculator.m in Sources */,
+				8557528723CDEC6100833205 /* XYFPSCell.m in Sources */,
 				8557528023CC9BA700833205 /* XYRACEasyUseController.m in Sources */,
 				8557526E23CC73F100833205 /* XYAppLifeCycleController.m in Sources */,
 				8557525823CC5C7A00833205 /* SceneDelegate.m in Sources */,
