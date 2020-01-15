@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UIView *colorView;
+@property (nonatomic, strong) UILabel *reuseLabel;
 
 @end
 

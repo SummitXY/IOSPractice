@@ -52,8 +52,8 @@
 
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         CGFloat SCREEN_WIDTH = [UIScreen mainScreen].bounds.size.width;
-        CGFloat itemW = (SCREEN_WIDTH - 20) / 10;
-        CGFloat itemH = itemW;
+        CGFloat itemW = (SCREEN_WIDTH - 20) / 2;
+        CGFloat itemH = itemW * 3;
         layout.itemSize = CGSizeMake(itemW, itemH);
         layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -61,7 +61,7 @@
         layout.minimumInteritemSpacing = 10;
 
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor blackColor];
+        _collectionView.backgroundColor = [UIColor grayColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[XYFPSCell class] forCellWithReuseIdentifier:@"XYFPSCell"];
@@ -69,11 +69,19 @@
     return _collectionView;
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    self.collectionView.frame = self.view.bounds;
+#pragma mark - Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+
+
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    
+}
+
+#pragma mark - DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataSource.count;
 }
@@ -105,6 +113,43 @@
         }
     }
 
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+}
+
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"viewWillLayoutSubviews");
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.collectionView.frame = self.view.bounds;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
+}
+
+- (void)dealloc
+{
+    NSLog(@"dealloc");
 }
 
 

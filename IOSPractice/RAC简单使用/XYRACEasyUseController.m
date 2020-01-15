@@ -87,20 +87,21 @@ static int count = 0;
 //    self.btn1.rac_command = btn1_rac_commond;
 
     // RAC使用6
-    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        count += 1;
-        [subscriber sendNext:[NSString stringWithFormat:@"%d",count]];
-        [subscriber sendCompleted];
-        return nil;
-    }];
-
-    [signal subscribeNext:^(id  _Nullable x) {
-        NSLog(@"subscribeNext1:%@",x);
-    }];
-
-    [signal subscribeNext:^(id  _Nullable x) {
-        NSLog(@"subscribeNext2:%@",x);
-    }];
+//    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//        count += 1;
+//        [subscriber sendNext:[NSString stringWithFormat:@"%d",count]];
+//        [subscriber sendCompleted];
+//        [subscriber sendNext:@"should not be sent"];
+//        return nil;
+//    }];
+//
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"subscribeNext1:%@",x);
+//    }];
+//
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"subscribeNext2:%@",x);
+//    }];
 
 //    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //        [signal subscribeNext:^(id  _Nullable x) {
@@ -186,17 +187,34 @@ static int count = 0;
 //    }];
 
 
+    // RAC使用9 -
+//    RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//        [subscriber sendNext:@"a"];
+//        [subscriber sendCompleted];
+//        [subscriber sendNext:@"b"];
+//        return nil;
+//    }];
+//
+//    RACSubject *subject = [RACSubject subject];
+////    [coldSignal subscribe:subject];
+//
+//    [subject subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"subscribeNext1:%@",x);
+//    }];
+//
+//    [coldSignal subscribe:subject];
+
     // RAC使用9
 //    RACSignal *coldSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
 ////        NSLog(@"subscriber send msg1");
 //        [subscriber sendNext:@"msg1"];
 //
-//        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
-////            NSLog(@"subscriber send msg2");
-//            [subscriber sendNext:@"msg2"];
-//            [subscriber sendCompleted];
-//        }];
-//
+////        [[RACScheduler mainThreadScheduler] afterDelay:2 schedule:^{
+//////            NSLog(@"subscriber send msg2");
+////            [subscriber sendNext:@"msg2"];
+////            [subscriber sendCompleted];
+////        }];
+//        [subscriber sendCompleted];
 //        [subscriber sendNext:@"msg3"];
 //        return nil;
 //    }];
@@ -204,12 +222,16 @@ static int count = 0;
 //    RACSubject *subject = [RACSubject subject];
 //    RACMulticastConnection *connection = [coldSignal multicast:subject];
 //    RACSignal *hotSignal = connection.signal;
-//    RACSignal *hotSignal = [coldSignal replayLazily];
+////    RACSignal *hotSignal = [coldSignal replayLazily];
 //
 //    [hotSignal subscribeNext:^(id  _Nullable x) {
 //        NSLog(@"hotsignal1 msg :%@",x);
 //    }];
-
+//
+//    [hotSignal subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"hotsignal2 msg :%@",x);
+//    }];
+//
 //    [connection connect];
 
 //    [[RACScheduler mainThreadScheduler] afterDelay:5 schedule:^{
@@ -217,7 +239,7 @@ static int count = 0;
 //            NSLog(@"hotsignal2 msg :%@",x);
 //        }];
 //    }];
-
+//
 //    [hotSignal subscribeNext:^(id  _Nullable x) {
 //        NSLog(@"hotsignal2 msg :%@",x);
 //    }];
@@ -227,31 +249,40 @@ static int count = 0;
 
 //    RACMulticastConnection *connection = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
 //        count += 1;
-//        [subscriber sendNext:[NSString stringWithFormat:@"%d",count]];
+//        [subscriber sendNext:[NSString stringWithFormat:@"1:%d",count]];
+//        [subscriber sendNext:[NSString stringWithFormat:@"2:%d",count]];
+//        [subscriber sendNext:[NSString stringWithFormat:@"3:%d",count]];
 //        [subscriber sendCompleted];
 //        return nil;
 //    }] publish];
 //
 //    [connection.signal subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"sub1:%@",x);
+//        NSLog(@"a:%@",x);
 //    }];
-//
 //    [connection.signal subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"sub2:%@",x);
+//        NSLog(@"b:%@",x);
 //    }];
 //
 //    [connection connect];
 
 
     //RAC使用11
-//    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-//        count += 1;
-//        [subscriber sendNext:[NSString stringWithFormat:@"1:%d",count]];
-//        [subscriber sendNext:[NSString stringWithFormat:@"2:%d",count]];
-//        [subscriber sendNext:[NSString stringWithFormat:@"3:%d",count]];
-//        [subscriber sendCompleted];
-//        return nil;
-//    }] replayLazily];
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        count += 1;
+        [subscriber sendNext:[NSString stringWithFormat:@"1:%d",count]];
+        [subscriber sendNext:[NSString stringWithFormat:@"2:%d",count]];
+        [subscriber sendNext:[NSString stringWithFormat:@"3:%d",count]];
+        [subscriber sendCompleted];
+        return nil;
+    }] replayLazily];
+
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"a:%@",x);
+    }];
+
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"b:%@",x);
+    }];
 //
 //    [[RACScheduler mainThreadScheduler] afterDelay:3 schedule:^{
 //        [signal subscribeNext:^(id  _Nullable x) {
